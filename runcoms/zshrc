@@ -11,3 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh.d" ]]; then
+  for i in `ls ~/.zsh.d/*.zsh`; do source $i; done
+fi
+
+USERNAME='Alexandre M. S.'
+TODAY=`date +%d/%m/%Y`
